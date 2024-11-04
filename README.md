@@ -1,0 +1,1 @@
+Development of an AI-powered resume builder that helps users generate customized, ATS-optimized resumes by analyzing their skills, experiences, and job preferences. The tool will ensure that resumes are tailored to improve the user's ATS score, enhancing their chances of passing automated job screening systems
