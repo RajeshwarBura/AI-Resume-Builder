@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="AI Resume Builder Logo" class="logo">
+        <h1>AI Resume Builder</h1>
+        <form id="resumeForm" action="/generate" method="POST" onsubmit="return validateForm()">
+            <h3>Personal Information</h3>
+            <input type="text" name="name" id="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+            <input type="text" name="phone" id="phone" placeholder="Phone Number" required><br>
+            <input type="text" name="address" id="address" placeholder="Address" required><br>
+
+            <h3>Education</h3>
+            <input type="text" name="degree" id="degree" placeholder="Degree" required><br>
+            <input type="text" name="university" id="university" placeholder="University" required><br>
+            <input type="text" name="year" id="year" placeholder="Year of Completion" required><br>
+
+            <h3>Work Experience</h3>
+            <input type="text" name="job_title" id="job_title" placeholder="Job Title" required><br>
+            <input type="text" name="company" id="company" placeholder="Company" required><br>
+            <input type="text" name="duration" id="duration" placeholder="Duration" required><br>
+            <textarea name="responsibilities" id="responsibilities" placeholder="Responsibilities" required></textarea><br>
+
+            <h3>Skills</h3>
+            <input type="text" name="skills" id="skills" placeholder="Skills (comma-separated)" required><br><br>
+
+            <input type="submit" value="Generate Resume">
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
